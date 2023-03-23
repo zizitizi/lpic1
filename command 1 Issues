@@ -1,0 +1,6 @@
+echo $SHELL  - to know witch default shell current linux use
+cd path - change directory to path
+pwd  - present working directory
+ls - list of files ( -l long list format + -a pluse hidden + -ltrh long list time access    ?????
+ctrl+l or clear - clear screen
+ip a or ip addr show - show system ip address
