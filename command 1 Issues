@@ -33,7 +33,14 @@ hostnamectl - more information about hostname
 sudo hostname changename1 - change hostname use --static to make it permanent and write it to etc config file
 whoami - this logon name
 sudo whoami - root
-w - list all user system logon name and server login information - tty(teletypeterminal) up to 6 user switch between with ctl+alt+f2 to f6 - pts/0(psuedo terminal session) user from network and ssh
-sudo 
+w - list all user system logon name and server login information - tty(teletypeterminal) up to 6 user switch between with ctl+alt+f2 to f6 - pts/0(psuedo terminal session) user from network and ssh, pts in etc > ssh config file default max 10 
+*  - filter any character any lenght
+?  - filter any character one lenght
+[] - filter range for one character
+{} - filter union multi pattern and multi or combination lenght
+touch file1  - make empty file1
+!  - not
+man command1  - command1 help 
+
 
  
