@@ -11,3 +11,29 @@ echo $myvar - see variable
 unset myvar - delete variable
 env - see environmental variable
 $ - to call variable
+passwd user - change user password with recommand password strange
+sudo passwd user - change user password with desired or short lenght
+sudo poweroff - poweroff linux
+cd ~  - go to home this user
+export PATH=$PATH:/home/zizi/bin - add to path
+tty - this phisycal terminal
+read -p -t -  example: read -p "please enter your age :" -t 10 -n 8 myage --->recive entry value from user in 10 second timeout and max 8 char var = myage
+echo $myage  - display myage value
+date - now date time
+timedatectl - complete date time system information
+timedatectl list-timezones - list available time zone
+timedatectl set-timezone Asia/Tehran - set time zone to teh
+sudo su - user    - switch user if blank switch to root
+sudo su user   - switch to user and go to user home  if blank switch to root home
+apt search cal - to search repository for cammand(cal) package
+hostname - display hostname
+bash -l  - reload bash 
+exit - ctl+d - exit from this user
+hostnamectl - more information about hostname
+sudo hostname changename1 - change hostname use --static to make it permanent and write it to etc config file
+whoami - this logon name
+sudo whoami - root
+w - list all user system logon name and server login information - tty(teletypeterminal) up to 6 user switch between with ctl+alt+f2 to f6 - pts/0(psuedo terminal session) user from network and ssh
+sudo 
+
+ 
