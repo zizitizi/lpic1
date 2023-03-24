@@ -1,0 +1,12 @@
+manual in linux have 5 section
+sec1 - commands - more usable ***
+sec2 - kernel
+sec3 - library
+sec4 - device
+sec5 - config files - more usable ***
+
+for example:
+
+man -s 5 hostname  - in section 5 search hostname
+man -a hostname   - man search in all
+man -w hostname   - path to hostname help file
