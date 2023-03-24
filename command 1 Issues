@@ -4,3 +4,10 @@ pwd  - present working directory
 ls - list of files ( -l long list format + -a pluse hidden + -ltrh long list time access    ?????
 ctrl+l or clear - clear screen
 ip a or ip addr show - show system ip address
+who -r  - runlevel state , init time 
+\  - to scape special character
+myvar = "myVar" - define new variable named: myvar with value myVar
+echo $myvar - see variable
+unset myvar - delete variable
+env - see environmental variable
+$ - to call variable
