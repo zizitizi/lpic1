@@ -19,7 +19,14 @@ mkdir -pv /dir1/dir2/dir3/dir4    - make all parent directory to dir4 . v for --
 cp sourcedir  destdir    - copy source file to destination 
 cp -r sourcedir  destdir    - copy source file and folder to destination
 cp -f sourcedir  destdir    - copy and owerwrite dest. without ask question. in linux after 2018 if files are same it overwrite automatically no need to -f.
-mv file1 file2    
+mv sourcedir/file1 destdir/file2    -  move or rename file1 to file2. like cut in windows - difference between move and copy move in directory dont need to -r or -R. 
+rm file1   - remove file and or directory (acts same as cp - it means for folder it needs -r or -R)- when files or folder belong to other owner it needs -f to not asking questions. note: linux dont have trash or recyclebin than in accidentally delete files need recovery solution.
+rm -rf  - its dangrous command be carefull when using it. best practice is to use many option and many filter.
+rm -rf *  - remove everything in linux , its darkwhole.
+rmdir  - to remove empty directory. not good command
+
+
+
 
 
 
