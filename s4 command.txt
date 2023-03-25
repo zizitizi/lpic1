@@ -14,7 +14,12 @@ watch -n 5 -d "wc -l syslog"   - every 5 second watch that syslog count increase
 cat /proc/cpuinfo   - assign the number to each cpu and show information about it
 cat /proc/meminfo   - show information about memory
 watch -n 1 -d "cat /proc/meminfo"
-
+mkdir dir1   - make directory dir1
+mkdir -pv /dir1/dir2/dir3/dir4    - make all parent directory to dir4 . v for --verbose or reports for excute commands
+cp sourcedir  destdir    - copy source file to destination 
+cp -r sourcedir  destdir    - copy source file and folder to destination
+cp -f sourcedir  destdir    - copy and owerwrite dest. without ask question. in linux after 2018 if files are same it overwrite automatically no need to -f.
+mv file1 file2    
 
 
 
