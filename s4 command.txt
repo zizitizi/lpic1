@@ -1,0 +1,20 @@
+ls -l   -  long list  ( - indicates files and d indicates directory in that list) size inn byte -  m modified time 
+ls -h   - human readable for ex: in size(megabyte m)
+ls -S   - sort from smallest to largest
+ls -r   - sort from newest to oldest (new in top)  *** -ltrh is most used option
+cat file1    - read file(concate)
+tac file1    - reverse read file fron butom to top
+cat -n file1     - read file with numbered line
+cat -nl file1     - nomber of line - count lines except empty line
+wc file1    - word count that give us 3 number. first is count of lines second is number of words third is number of character
+wc -l    - way to recognize File integrity or number of config- ex.: number of log counts if it growth that mean system works and logs be increased
+watch "wc -l ssh -config"   - watch see all things in "" and show logs. ctrl+c to cancel
+watch -n 5 "wc -l syslog"    - every 5 second watch that syslog count increased . we could write script to watch if it's not increased send email to alert admin that system face a problem 
+watch -n 5 -d "wc -l syslog"   - every 5 second watch that syslog count increased , -d shows changed line highlighted
+cat /proc/cpuinfo   - assign the number to each cpu and show information about it
+cat /proc/meminfo   - show information about memory
+watch -n 1 -d "cat /proc/meminfo"
+
+
+
+
