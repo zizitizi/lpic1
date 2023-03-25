@@ -1,0 +1,2 @@
+to rediect to file use >
+to redirect to other command use pipe | or 
