@@ -109,8 +109,17 @@ bin/sh: user with login and use bin/sh to command
 bin/zshs: user with login and use bin/zshs to command.
 
 find:
+find tools to find in directory and subdirectory. it uses many resource like cpu and memory,... and we should never use it on production server. i case of emergency use many option and more details in find command switch in order to decrease resource usage. use man find to help for cammnd switch.
+find is Exception cammand . find options is word but we use - in it.ex.:
+find . -name "m*.conf"
+note : in find we use * and regex and must be in "" . ****important******
+-type: f means file , d means directory
+-mtime: modification time. linux time stamp . edit or modified time 
+-ctime: change time.
+-atime: access time. the last time file cat by someone
 
 
+stat file1.txt  - file state information
 
 
 
