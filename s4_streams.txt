@@ -114,7 +114,9 @@ find is Exception cammand . find options is word but we use - in it.ex.:
 find . -name "m*.conf"
 note : in find we use * and regex and must be in "" . ****important******
 -type: f means file , d means directory
--mtime: modification time. linux time stamp . last time file edit or modified. in ls this option is used
+
+
+-mtime: modification time. linux time stamp . last time file edit or modified. in ls this option is used. its more important.*****
 -ctime: change time.
 -atime: access time. the last time file cat by someone
 
@@ -125,7 +127,10 @@ ctime- in this option edit means content or a attribute of file was changed
 
 stat file1.txt  - file state information
 
+find /etc -type f -mtime -2   - find in folder etc for all file since 2 dayes ago till now
 
+-mtime: -2 : since 2 dayes ago till now
+exactly 2 dayes age (24 hours 
 
 
 
