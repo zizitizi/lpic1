@@ -89,6 +89,16 @@ sed replace a word
 tr replace a character
 
 tr 't' '*'    - replace t with *
+cat name.txt | tr '' '|'   - replace in name.txt '' with '|' and preview
+delimiter default is ':' for change delimiter we con use tr
+
+
+we have 3 model user in linux :
+false: no login .no permission for login . can not cammand in bash. not switch
+no login: no permission for login . can not cammand in bash. not switch. application users. just for owership their file used.
+bin/sh: user with login and use bin/sh to command
+bin/zshs: user with login and use bin/zshs to command.
+
 
 
 
