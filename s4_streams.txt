@@ -149,6 +149,15 @@ find . -empty -exec rm {} \;    - find every empty file in this directory and de
 find is tool that difference from other binary tool . find is function and accept arguman in {} and need end character. use \; to tell end of function. we use backslash \ to use ; telling find fuction ends. 
 
 
+find . -mtime -2 -exec rm -rf {} \;   - find every file that modified 2 dayes and before and delete it
+
+find . -name "*.txt" -exec cp {} /temp \;  - find every txt in this directory and copy it to temp directory
+
+find . -exex gzip {} \;   - find every file and gzip it
+
+we can use min-depth and max-depth to limit find function
+
+
 
 
 
