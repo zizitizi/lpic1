@@ -52,6 +52,22 @@ example:
 we have error in line of 165. what would we do?
 cat -n syslog | head -170 | tail -10
 
+more and less:
+both of them is used to open textpage . more is deprecated and dont go to top lines but less go any where
+
+sed:
+sed is stream editor to replace one word in file:
+sed "s/arash/hamed/g" file1.txt  -   substitude find and replace arash with hamed globally i file1.txt. we can user pipeline
+
+nano:
+text editor in ubuntu. vi and vim are unix base
+
+
+
+
+
+
+
 
 
 
