@@ -34,6 +34,25 @@ cat /etc/passwd | wc -l
 filter:
 head file1   - show 10 top line of file 1
 tail file1   - show 10 butom line of file1
+tail -32   - show 32 butom line of file1
+head -32 file1   - show 32 top line of file 1
+tail -f   - tail follow realtime output - in order of tshoot its useful for ex. open 2 sesstion tab , in one tab open service in other open tail -f servicelog .  compare and investigate output
+
+example:
+cd /var/log
+cat syslog | wc -l
+tail syslog
+
+example: 
+exactly line 14 file1:
+head -14 file1 | tail -1
+cat -n syslog | head -14 | tail -1
+
+example: 
+we have error in line of 165. what would we do?
+cat -n syslog | head -170 | tail -10
+
+
 
 
 
