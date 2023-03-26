@@ -155,7 +155,8 @@ find . -name "*.txt" -exec cp {} /temp \;  - find every txt in this directory an
 
 find . -exex gzip {} \;   - find every file and gzip it
 
-we can use min-depth and max-depth to limit find function
+we can use min-depth and max-depth to limit find function .
+man find   - use help
 
 
 
