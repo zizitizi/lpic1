@@ -1,2 +1,23 @@
 to rediect to file use >
 to redirect to other command use pipe | or 
+
+
+ls -l > ~/output.txt
+> output with overwrite
+>> output append to file
+
+output 1,2,3
+
+output 1 is default:
+echo "hello!" > output.txt == echo "hello!" 1 > output.txt
+
+output 2 is err:
+ech "hello!" > output.txt   - has no output
+ech "hello!" 2 > output.txt   - redirect error output to output.txt file
+
+
+dev/null:
+
+this file is blackwhole . everything that redirected to here is go zeros or erased or ignored and not output. dev/null never been fulled. it has fixed size of volume.
+
+
