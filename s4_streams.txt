@@ -141,6 +141,14 @@ find /etc -type f -mtime -2   - find in folder etc for all file since 2 dayes ag
 
 
 
+-exec :
+do or execute something like: cp or rm or mv or ....
+
+find . -empty -exec rm {} \;    - find every empty file in this directory and delet it.
+ 
+find is tool that difference from other binary tool . find is function and accept arguman in {} and need end character. use \; to tell end of function. we use backslash \ to use ; telling find fuction ends. 
+
+
 
 
 
