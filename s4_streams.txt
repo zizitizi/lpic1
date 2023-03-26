@@ -91,6 +91,15 @@ tr replace a character
 tr 't' '*'    - replace t with *
 cat name.txt | tr '' '|'   - replace in name.txt '' with '|' and preview
 delimiter default is ':' for change delimiter we con use tr
+echo "hello arash from: this is test" | tr -d [:blank:]   - delet every space in this text
+echo "hello arash from: this is test" | tr -d [:digit:]   - delet every digit in this text
+echo "hello arash from: this is test" | tr -[:lower:][:upper:]   - change lower case to upper case in this text. its very useful command in bash script for example, becouse linux is case sensitive ,we can use this command in our script to change user input all to lower case for uniformity. in user input and then compare.
+
+[:punet:]  - special character : ? ! $ ,...
+
+vertical white space is inter.
+horizontal white space is space.
+
 
 
 we have 3 model user in linux :
@@ -99,6 +108,7 @@ no login: no permission for login . can not cammand in bash. not switch. applica
 bin/sh: user with login and use bin/sh to command
 bin/zshs: user with login and use bin/zshs to command.
 
+find:
 
 
 
