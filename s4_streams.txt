@@ -21,3 +21,27 @@ dev/null:
 this file is blackwhole . everything that redirected to here is go zeros or erased or ignored and not output. dev/null never been fulled. it has fixed size of volume.
 
 
+two output:
+1>&2   - error and result are outputed. ex.:
+
+echo "hello!" >> output.txt 2>&1
+echo "hello!" > /dev/null 2>&1
+
+pipline or | :
+one command output will be other one input. ex.:
+cat /etc/passwd | wc -l
+
+filter:
+head file1   - show 10 top line of file 1
+tail file1   - show 10 butom line of file1
+
+
+
+
+
+
+
+
+
+
+
