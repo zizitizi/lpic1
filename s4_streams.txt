@@ -61,6 +61,34 @@ sed "s/arash/hamed/g" file1.txt  -   substitude find and replace arash with hame
 
 nano:
 text editor in ubuntu. vi and vim are unix base
+in nano ^ == ctrl , M == alt
+
+sed make preview output to inpalce changes and save in file, use -i swich with it. also we can use other character instead of / .Provided that all those character are the same.
+sed -i "s/arash/hamed/g" names.txt
+sed -i "s+arash+hamed+g" names.txt
+
+we can use variable for string ex.: $myname
+
+example:
+change in line 3 to 5 arash to hamed
+sed  "3,5s/arash/hamed/g" names.txt
+change just in line 1
+sed  "1s/arash/hamed/g" names.txt
+
+for just preview in sed and not change anything use -n:
+use p for paragraph. when use inter in line it meanse paragraph
+sed -n "3p" name.txt   - preview line or paragraph 3
+sed -n "2,4p" name.txt   -preview line or paragraph 2 to 4
+
+
+
+tr:
+to replace one character. its very useful command.
+
+sed replace a word
+tr replace a character
+
+tr 't' '*'    - replace t with *
 
 
 
