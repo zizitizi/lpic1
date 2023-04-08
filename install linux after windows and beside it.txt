@@ -41,8 +41,10 @@ as you need you can revert everything
              use as - EXT4 journaling file system
              mount point - /home
              
-             
-             
+           
+           
+9- after that click on install and continue installation guide
+ 
              
 
              
