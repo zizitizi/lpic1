@@ -1,12 +1,20 @@
 
 1- first of all i download linux 22.04 lts ubuntu desktop iso image in my pc
+2- free up sidk space for linux ubuntu installation i free up 360 g 
 
-2- download rufus
-3- open up rufus as administrator after that connect my usb device.
+3- download rufus
+4- open up rufus as administrator after that connect my usb device.
 
 note : in my case rufus can not recogniza my usb device after i  try Alt-F in Rufus, which does the same to enable detection of fixed disks/hard drives. 
  
-4- after detect i brows it to my linux iso - set boot selection on gpt and start
+5- after detect i brows it to my linux iso - set boot selection on gpt and start but i got error in restart mode - then i set boot selection mbr or uefi. its work like a charm. wait for rufus to make my bootable usb device
+
+6- in windows go to start type advnced startup option and restart in that window select usb device and follow instruction
+
+
+7- after linux boot up hang on instruction but choose other installtion option in installation type. in hard partitioning i click on + and make swap partion boot ,/,home partition.
+
+
 
 
 
