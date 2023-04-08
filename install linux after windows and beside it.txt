@@ -30,7 +30,22 @@ as you need you can revert everything
              beginning - location for the new partition
              mount point - /
              
-   for boot:           
+   for boot: size - 1000 mb
+             logical - type for new partiotion
+             beginning - location for the new partition
+             mount point - /boot
+             
+   for home: size - remained free space
+             logical - type for new partiotion
+             beginning - location for the new partition
+             use as - EXT4 journaling file system
+             mount point - /home
+             
+             
+             
+             
+
+             
 
 
 
