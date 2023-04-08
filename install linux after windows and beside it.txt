@@ -12,7 +12,28 @@ note : in my case rufus can not recogniza my usb device after i  try Alt-F in Ru
 6- in windows go to start type advnced startup option and restart in that window select usb device and follow instruction
 
 
-7- after linux boot up hang on instruction but choose other installtion option in installation type. in hard partitioning i click on + and make swap partion boot ,/,home partition.
+7- after linux boot up hang on instruction but choose something else option in installation type. in hard partitioning i click on + and make swap partion boot ,/,home partition.
+
+   root: ubuntu and modules install on this partition
+   Home: users home directiory
+   Swap: temprory ram data
+   Boot: ubuntu boot file system
+   
+as you need you can revert everything
+8- for swap: size - 4000 mb
+             logical - type for new partiotion
+             beginning - location for the new partition
+             swap area - use as
+             
+   for root: size - 300000
+             primary - type for new partition
+             beginning - location for the new partition
+             mount point - /
+             
+   for boot:           
+
+
+
 
 
 
