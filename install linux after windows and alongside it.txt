@@ -45,7 +45,12 @@ as you need you can revert everything
            
 9- after that click on install and continue installation guide
  
+ 
+ 
+to see dual boot menu from windows in cmd as administrator write:
+
              
+bcdedit /set {bootmgr} displaybootmenu yes
 
              
 
