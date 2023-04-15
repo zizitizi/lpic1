@@ -5,7 +5,7 @@
 
 #### Vi
 
-old version of vim. vi is default editor in all linux distro. but today vim is advanced editor . but vim is not available in some old version. vi is exit in all version even in datacenter. its same as word editor in windows operator.
+old version of vim. vi is default editor in all linux distro. but today vim is advanced editor . when we type vi it opens vim in todays distro. but vim is not available in some old version. vi is exit in all version even in datacenter. its same as word editor in windows operator.
 
 there is scape mode in vi that is central point of other mode. for doing any action in vi we should go to related mode.
 
@@ -27,10 +27,25 @@ i or insert boton in keyboard- insert text before cursor - insert mode
 :+tab - help command
 :set nu - numberd line view- for debug
 :set nonu - clear number line
+:tabnew - new tab in editor
+:tabnext - next tab
+:tabprevious - previous tab
+:tabclose -quit
+:tabnew path/file1 - open file 1 in other tab
+:new path/file1 - open in new windows
+:ctrl+ww - move between open vi windows
+
+
+
+
 
 in escape mode hit / for go to search mode
 n for next - shift+n for previus
 
+note:
+when we set config first of all copy config file with complete date in name. then change main file
+
+vimdiff file1 file2  ==vi -d file1 file2 ----> show difference between file1 and file2
 
 
 
