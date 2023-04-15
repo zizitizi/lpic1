@@ -58,6 +58,24 @@ nano is new version of pico.
 
 
 ###### compression tool
+gzip is compressing tool for single file
+gzip file1  -compressing with default rate6
+gunzip file1.gz or gzip -d file1.gz - uncompressing
+option: 0k keep both -l list inf -v verbose
+
+
+zcat -zgrep ,.... is for command tool
+yes command type y until press ctl+c
+
+
+bzip2 rate high speed low
+bzip2 file1
+bunzip fil1.bz  
+
+xz rate high speed high
+xz file1
+unxz file1.xz
+
 
 
 
