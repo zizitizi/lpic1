@@ -61,7 +61,7 @@ nano is new version of pico.
 gzip is compressing tool for single file
 gzip file1  -compressing with default rate6
 gunzip file1.gz or gzip -d file1.gz - uncompressing
-option: 0k keep both -l list inf -v verbose
+option: 0k keep both -l list inf -v verbose -r directory recursive
 
 
 zcat -zgrep ,.... is for command tool
@@ -71,13 +71,24 @@ yes command type y until press ctl+c
 bzip2 rate high speed low
 bzip2 file1
 bunzip fil1.bz  
+bzcat ,....
 
-xz rate high speed high
+
+xz rate high speed high  ---- beat *******
 xz file1
 unxz file1.xz
+xzcat ,....
 
+xz -r [0-9]*.txt   -filter list for xz
 
+zip compress and archive
+zip file1.zip path/file2 path/file3
 
+tar :
+archiving tool
+tar -cvf file1.tar file1 file2 ,..
+tar -xvf file1.tar
+-z gzip tar.gz -j tar.bz2 -J tar.xz
 
 
 
