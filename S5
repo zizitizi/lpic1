@@ -15,6 +15,9 @@ command mode
 edit mode
 
 
+in commmand mode
+i or insert boton in keyboard- insert text before cursor
+:wq! - save and exit with out prompt
 
 
 
