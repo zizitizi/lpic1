@@ -12,8 +12,8 @@ there is scape mode in vi that is central point of other mode. for doing any act
 some mode is:
 
 command mode
-edit mode
-
+edit or insert mode
+search mode
 
 in commmand mode
 i or insert boton in keyboard- insert text before cursor - insert mode
@@ -21,9 +21,19 @@ i or insert boton in keyboard- insert text before cursor - insert mode
 
 :w - save
 :w [filename] - save as
-:q - exit with promp
-:q! - exit without promp even there was a change in file
+:q - exit with promp when there is not change - quit
+:q! - exit without promp even there was a change in file - force quit
 :wq! - save and exit with out prompt
+:+tab - help command
+:set nu - numberd line view- for debug
+:set nonu - clear number line
+
+in escape mode hit / for go to search mode
+n for next - shift+n for previus
+
+
+
+
 
 
 
