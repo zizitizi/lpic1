@@ -46,6 +46,11 @@ note:
 when we set config first of all copy config file with complete date in name. then change main file
 
 vimdiff file1 file2  ==vi -d file1 file2 ----> show difference between file1 and file2
+send change between 2 file with :
+:diffput  -  >
+:diffget   - <
+
+
 
 
 
