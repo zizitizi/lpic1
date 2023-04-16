@@ -113,6 +113,31 @@ tar -Jcvf archive1.tar.xz archive1.tar h123.txt   ******************
 
 ####### manage user and group in linux
 
+see current user groups:
+groups
+cat /etc/group
+
+group = gid name member 
+gid 0-999  - system group with high permission
+gid 1000<  - default - user group
+
+
+groupadd
+groupdel
+groupmod - name or gid -n -g
+
+user  = uid - shell - comment - home - gid
+
+useradd
+userdel
+usermod
+
+-m - make home with user name in directory /home/
+
+
+sudo groupadd docker -g 2000
+sudo useradd -m -g 2000 -c "hello zeintiz" -s /bin/bash zeintiz
+
 
 
 
