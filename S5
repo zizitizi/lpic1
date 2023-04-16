@@ -116,6 +116,13 @@ tar -Jcvf archive1.tar.xz archive1.tar h123.txt   ******************
 see current user groups:
 groups
 cat /etc/group
+in this list we just see secondary group
+primary group is initial group that makes in create user
+-g -secondary
+-G - primary group - main group
+
+when we make file - user owner , group owner - user and primary group
+
 
 group = gid name member 
 gid 0-999  - system group with high permission
@@ -139,7 +146,9 @@ sudo groupadd docker -g 2000
 sudo useradd -m -g 2000 -c "hello zeintiz" -s /bin/bash zeintiz
 
 
+id - information - gid primary -groups primary+secondary
 
+usermod -aG newgroupname username - a avoid overwrite -G without -a overwrite groups
 
 
 
