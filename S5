@@ -90,10 +90,28 @@ tar -cvf file1.tar file1 file2 ,..
 tar -xvf file1.tar
 -z gzip tar.gz -j tar.bz2 -J tar.xz
 
+- make tar file and archive all txt file in this directory and dir1 in it:
+tar -zcvf archive1.tar.gz *.txt dir1  ***************
+
+- list archive file
+tar -tf archive1.tar.gz
 
 
+for append all .sh file to archive and see list of archive:
+gunzip archive1.tar.gz
+tar -rvf archive1.tar *.sh
+tar -tf archive1.tar |grep ".sh"
+
+to extract (not delet ) file from archive
+ tar -xvf archive1.tar ss.sh
+ 
+ 
+ 
+xz tar file and a txt file:
+tar -Jcvf archive1.tar.xz archive1.tar h123.txt   ******************
 
 
+####### manage user and group in linux
 
 
 
