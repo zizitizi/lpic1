@@ -10,6 +10,9 @@ nowdays ssh is by default open in linux distro but before is not and should be o
 common method for encrypt and keygenrator is rsa. then when you navigate to .ssh folder in user home, id_rsa.pub is user public key and id_rsa is private key and always keep it secure and confidential.
 
 ssh-keygen
+
+use this command just one time on each server to make keys. cuase use this command again make pub and pri keys overwrite. if You had to use it then copy pub key and all stage again.
+
 cd ~/.ssh
 
 ls -l
