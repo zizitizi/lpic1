@@ -82,6 +82,8 @@ in /etc/ssh we have to config file:
   
 define variable:
 
-set VAR1 = "value"
+VAR1="value"
+
 echo $VAR1
+
 unset VAR1
