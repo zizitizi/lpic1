@@ -46,4 +46,5 @@ ssh with root user in debian based (ubuntu) server is disabled by default. to ch
 in /etc/ssh we have to config file:
   1- ssh_config : its for outband trafic. its for our server ssh configuration
   
-  2- sshd_config : its for inbond trafic. its for destination server ssh configuration
+  2- sshd_config : its for inbond trafic. its for destination server ssh configuration. its more important ******
+  
