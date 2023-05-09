@@ -11,7 +11,7 @@ common method for encrypt and keygenrator is rsa. then when you navigate to .ssh
 
 ssh-keygen
 
-use this command just one time on each server to make keys. cuase use this command again make pub and pri keys overwrite. if You had to use it then copy pub key and all stage again.
+use this command just one time on each server to make keys. cuase use this command again make pub and pri keys overwrite. if You had to use it then copy pub key and all stage again. to check if key gen command run go to .ssh folder and rsa keys.
 
 cd ~/.ssh
 
@@ -41,4 +41,9 @@ for the first time it will be asked for user1 pass to connect and copy key. but 
 ##### note:
 ssh with root user in debian based (ubuntu) server is disabled by default. to change it you should change ssh configuration.
 
+### SSH config
 
+in /etc/ssh we have to config file:
+  1- ssh_config : its for outband trafic. its for our server ssh configuration
+  
+  2- sshd_config : its for inbond trafic. its for destination server ssh configuration
