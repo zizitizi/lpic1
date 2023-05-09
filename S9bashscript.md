@@ -87,3 +87,18 @@ VAR1="value"
 echo $VAR1
 
 unset VAR1
+
+
+$1 ,$2,.... $9 . we can call them in front of our function
+myfunc()
+{
+echo $1
+echo $2
+echo $3
+}
+
+myfunc "arash" "ali" "sara"
+
+
+## shebang
+
