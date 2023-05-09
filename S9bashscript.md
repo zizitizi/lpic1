@@ -71,3 +71,7 @@ in /etc/ssh we have to config file:
   systemctl restart sshd
   
   
+  # shell scripting (bash scripting)
+  
+  
+  
