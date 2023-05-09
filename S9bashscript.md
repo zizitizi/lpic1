@@ -48,15 +48,20 @@ in /etc/ssh we have to config file:
   
   2- sshd_config : its for inbond trafic. its for destination server ssh configuration. its more important ******
   
-  commanm config:
+  ##### common config:
+  
+  after change default config uncomment it. comment config is default config.
+  
   
   listen address used to set managment ip ssh. other ip can not login with ssh
-  password login disable 
+  password login disable - recomand disable to datacenter and just pubkeyauthenticate enable
   pubkey authentication on
   logingracetime 5min time to prompt for enter pass
   permitroot login - default no- dont let root to ssh login
   max session- number of ssh session- in ssh tunel for vpn maybe 1000 :)
-  
+  pubkeyauthentication yes- we recomand to change it to yes in datacenter
+  passwordauthentication no- recomand
+  permitemty pass no-
   
  see  /var/log/auth.log
   
