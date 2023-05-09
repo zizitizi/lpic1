@@ -52,6 +52,7 @@ in /etc/ssh we have to config file:
   
   after change default config uncomment it. comment config is default config.
   
+  before every change in etc/config file first of all cp and backup it with date on it name 
   
   listen address used to set managment ip ssh. other ip can not login with ssh
   password login disable - recomand disable to datacenter and just pubkeyauthenticate enable
