@@ -35,5 +35,7 @@ ssh-copy-id user1@server1
 for the first time it will be asked for user1 pass to connect and copy key. but after that no need to password
 
 
+##### note:
+ssh with root user in debian based (ubuntu) server is disabled by default. to change it you should change ssh configuration.
 
 
