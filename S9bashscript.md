@@ -73,5 +73,15 @@ in /etc/ssh we have to config file:
   
   # shell scripting (bash scripting)
   
+  define a function in linux:
+  function_name()
+  {
+   [action1]
+   [action2]
+  } 
   
-  
+define variable:
+
+set VAR1 = "value"
+echo $VAR1
+unset VAR1
