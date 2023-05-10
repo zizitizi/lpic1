@@ -142,4 +142,15 @@ note: when we use 2 variable in one line in script for out put use ${}.
 
 OUTPUT="~/output_${USER}_${HOSTNAME}.log"
 
+another sample:
+
+#!/bin/bash
+
+#date
+
+DATE1=`date +%Y%m%d`
+echo "today is ${DATE1}"
+
+##### impotant note: for using command in variable using single quote or double quote make command simple string. for using command result in variable use: back tick ` (near number 1 in main keyboard) or $().
+
 
