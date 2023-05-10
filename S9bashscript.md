@@ -102,3 +102,27 @@ myfunc "arash" "ali" "sara"
 
 ## shebang
 
+to specify script file in first line use shebang and path to compiler for ex.:
+#! /bin/bash
+
+or
+
+#! /bin/python3
+
+
+all program or excutable file detemine with it first line that for bash script file use .sh soffix. for ex.:
+
+vi script1.sh
+#! /bin/bash
+
+echo "hello script"
+
+
+note : in linux file default permission have not excute permission. then we should grant excute permission to script file:
+chmod +x script1.sh
+
+for excuting bash script file path to it. for current directory use:
+./script1.sh
+ but its recoomand to use complete path to it. if an excutable file is be in /bin than we just excute it without path. fro ex.: script1.sh
+ 
+ 
