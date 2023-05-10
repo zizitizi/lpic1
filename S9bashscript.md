@@ -168,3 +168,95 @@ expr ----> performing math integer - can be calculate by itself - expr 5 + 10  -
 
 
 
+ 
+### expr , $[]   --- integer
+  
+  Operator
+
+
+  
+ 
+ 
+  
+  expr ARG1 + ARG2
+
+
+  
+ 
+ 
+  
+  expr ARG1 - ARG2
+
+
+  
+ 
+ 
+  
+  expr ARG1 * ARG2
+
+
+  
+ 
+ 
+  
+  expr ARG1 / ARG2
+
+
+  
+ 
+ 
+  
+  expr ARG1 % ARG2
+
+
+  
+ 
+ 
+  
+  expr ARG1 < ARG2
+
+
+  
+ 
+ 
+  
+  expr ARG1 <= ARG2
+
+
+  
+ 
+ 
+  
+  expr ARG1 = ARG2
+
+
+  
+ 
+ 
+  
+  expr ARG1 != ARG2
+
+
+  
+ 
+ 
+  
+  expr ARG1 >= ARG2
+
+
+  
+ 
+ 
+  
+  expr ARG1 > ARG2
+
+
+  
+ ### bc - base calculator - for float
+ 
+
+
+
+
+
+
