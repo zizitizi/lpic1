@@ -159,6 +159,12 @@ echo "today is ${DATE1}"
 ${}  ---> variable
 $()  ---> result of commands
 ` `  ---> result of commands
+$[] ----> performing math integer - used with defined variable - MM=$[5+10] , echo $MM
+expr ----> performing math integer - can be calculate by itself - expr 5 + 10  - with space calculate without space a string variable Considered. also for use multiply do \*  .
+
+
+
+
 
 
 
