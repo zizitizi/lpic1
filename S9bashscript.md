@@ -154,3 +154,11 @@ echo "today is ${DATE1}"
 ##### impotant note: for using command in variable using single quote or double quote make command simple string. for using command result in variable use: back tick ` (near number 1 in main keyboard) or $().
 
 
+### at a glance
+
+${}  ---> variable
+$()  ---> result of commands
+` `  ---> result of commands
+
+
+
