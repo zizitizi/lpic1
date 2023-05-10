@@ -130,7 +130,7 @@ for excuting bash script file path to it. for current directory use:
  
 #!/bin/bash
 
-# helo description
+#helo description
 
 MYNAME="zizi tizi"
 
