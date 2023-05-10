@@ -125,4 +125,21 @@ for excuting bash script file path to it. for current directory use:
 ./script1.sh
  but its recoomand to use complete path to it. if an excutable file is be in /bin than we just excute it without path. fro ex.: script1.sh
  
+ another sample: 
  
+ 
+#!/bin/bash
+
+# helo description
+
+MYNAME="zizi tizi"
+
+echo "my name is ${MYNAME}"
+
+ 
+ 
+note: when we use 2 variable in one line in script for out put use ${}.
+
+OUTPUT="~/output_${USER}_${HOSTNAME}.log"
+
+
