@@ -296,6 +296,12 @@ NOTE: OUTPUT should not have double qoute "".
  --> 1.28
  
  
+ echo "3*5" | bc
+ 
+ with ; we can write 2 line in one line.
+ 
+ echo "scale=5; 2.55555/3.22333" |bc
+ 
  
  
 
