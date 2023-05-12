@@ -250,6 +250,40 @@ expr ----> performing math integer - can be calculate by itself - expr 5 + 10  -
   
   expr ARG1 > ARG2
 
+another sample5:
+
+#!/bin/bash
+
+#sample of 2 number input and multiply and divide integer
+
+read -p " enter first number :" VAR1
+read -p " enter second number: " VAR2
+
+MULTI=`expr $VAR1 \* $VAR2`
+
+DIVIDE=$[$VAR1/$VAR2]
+
+echo " your choosen number multiply is ${MULTI} and divided is $DIVIDE "
+
+
+another sample:
+
+#!/bin/bash
+
+#sample date command tee
+
+MYDATE=$(date +%Y%d%m)
+
+OUTPUT=~/output2_`hostname`__`date +%Y%m%d`.txt
+
+echo "today is ${MYDATE}" | tee -a  ${OUTPUT}
+
+echo "heloo 2 lien" | tee -a ${OUTPUT}
+
+
+NOTE: OUTPUT should not have double qoute "".
+
+
 
   
  ### bc - base calculator - for float
