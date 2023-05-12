@@ -161,7 +161,7 @@ $()  ---> result of commands
 ` `  ---> result of commands
 $[] ----> performing math integer - used with defined variable - MM=$[5+10] , echo $MM
 expr ----> performing math integer - can be calculate by itself - expr 5 + 10  - with space calculate without space a string variable Considered. also for use multiply do \*  .
-
+bc ---> performing math float - bash calculator
 
 
 
@@ -286,7 +286,17 @@ NOTE: OUTPUT should not have double qoute "".
 
 
   
- ### bc - base calculator - for float
+ ### bc - bash calculator - for float
+ 
+ bc  - active calculator to get commands. for divide / that its without desimal digit. for get desimal digit use scale command for specify The number of decimal places.
+ 
+ for ex.:
+ scale = 2
+ 3.2/2.5
+ --> 1.28
+ 
+ 
+ 
  
 
 
