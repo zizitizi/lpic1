@@ -173,81 +173,37 @@ bc ---> performing math float - bash calculator
   
   Operator
 
-
-  
- 
- 
   
   expr ARG1 + ARG2
 
-
-  
- 
- 
   
   expr ARG1 - ARG2
 
 
-  
- 
- 
-  
   expr ARG1 * ARG2
 
-
-  
- 
- 
-  
   expr ARG1 / ARG2
 
 
   
- 
- 
-  
   expr ARG1 % ARG2
-
-
-  
- 
  
   
   expr ARG1 < ARG2
 
 
-  
- 
- 
-  
   expr ARG1 <= ARG2
 
 
   
- 
- 
-  
   expr ARG1 = ARG2
 
-
-  
- 
- 
   
   expr ARG1 != ARG2
 
-
-  
- 
- 
   
   expr ARG1 >= ARG2
 
-
-  
- 
- 
-  
   expr ARG1 > ARG2
 
 another sample5:
@@ -302,7 +258,19 @@ NOTE: OUTPUT should not have double qoute "".
  
  echo "scale=5; 2.55555/3.22333" |bc
  
- 
+ #!/bin/bash
+
+#bc calculator
+
+read -p " enter forst num. : " VAR1
+read -p " enter second num. : " VAR2
+
+MULTI=`echo "$VAR1*$VAR2" |bc`
+DIVI=`echo "scale=4; $VAR1/$VAR2" | bc`
+echo " multi is $MULTI , divide id $DIVI "
+
+
+
  
 
 
