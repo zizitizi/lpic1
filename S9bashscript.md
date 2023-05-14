@@ -427,6 +427,36 @@ all args are var1 var2 var3 var4
   
 Practice: write program to give an ip and ping it :
 
+#!/bin/bash
+
+#common ping script
+
+read -p "   enter your IP :  " MYIP
+
+OUTPUT=~/outputping9_IP_`date +%Y%m%d`.log
+ping -c 5 $MYIP >/dev/null
+
+if [ $? -eq 0 ]
+then
+        echo " `date +%Y/%m/%d-%H:%M:%S` -------> server ${MYIP} is reachable" | tee -a $OUTPUT
+else
+        echo " `date +%Y/%m/%d-%H:%M:%S` -------> server ${MYIP} is not reachable" | tee -a $OUTPUT
+fi
+
+
+
+### cut
+
+cut file vertically
+-c in number of caracter
+cut -d":" -f 1,2,3 /etc/passwd   - cut delimiter : show field 1,2,3
+
+bestpractice is to use tab instead of space in column file and default delimiter is tab and no need to write it
+but in many org uses |
+cat mynames.txt | cut -f 2,4
+
+## awk
+
 
 
   
