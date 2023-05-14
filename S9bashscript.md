@@ -258,6 +258,8 @@ NOTE: OUTPUT should not have double qoute "".
  
  echo "scale=5; 2.55555/3.22333" |bc
  
+ sample for bash calculator:
+ 
  #!/bin/bash
 
 #bc calculator
@@ -268,6 +270,18 @@ read -p " enter second num. : " VAR2
 MULTI=`echo "$VAR1*$VAR2" |bc`
 DIVI=`echo "scale=4; $VAR1/$VAR2" | bc`
 echo " multi is $MULTI , divide id $DIVI "
+
+#### EOF end of file
+
+wc << EOF   --- always come at the end of command
+
+cat << EOF
+
+cat >> mynames.txt << EOF
+
+
+
+
 
 
 
