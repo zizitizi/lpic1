@@ -331,8 +331,106 @@ fi
 
 
 
+another sample :
+#!/bin/bash
+
+#compare two number to devide
+
+read -p " enter number: " VAR1
+
+read -p "  enter a number again : " VAR2
+
+MULTI=`echo "$VAR1*$VAR2" | bc`
+if [ $VAR1 > $VAR2 ]   #if there is digit in one of condition side we should use -gt inplace of >    .
+then
+        DIV=`echo "scale=4 ; $VAR1/$VAR2" | bc`
+else
+        DIV=`echo "scale=4; $VAR2/$VAR1 " |bc`
+fi
+
+echo " your multi ply is $MULTI and devide is $DIV"
 
 
+
+
+
+
+ 
+ ### conditioning Expression
+
+  
+  STRING1 = STRING2
+
+  
+  STRING1 != STRING2
+  
+  -n STRING1    -- not zero string
+  
+  -z STRING1    --- zero string
+  
+  INT1 -eq INT2   -equal
+  
+  INT1 -ne INT2   -- not equal
+ 
+  INT1 -ge INT2   ---- qreater equal than
+  
+  INT1 -gt INT2     ----= greater than
+  
+  INT1 -le INT2   ----- less equal than
+  
+  INT1 -lt INT2  ------- less than  
+  
+  File1 -nt File2  ----- file comparision newer than
+
+  File1 -ot File2   -----  file comparision older than
+
+
+
+### bash builtin variable
+ 
+  
+  $?  - common use******* - status of last command - if 0 = seuccesful - if !0 =failed
+
+  $0   - name of script
+
+  $1 ~ 9  - number to give var for script for ex.:
+  #!/bin/bash
+
+
+echo "first var is $1"
+echo "first var is $2"
+echo "first var is $3"
+echo "first var is $4"
+echo "script name is $0"
+echo " all args are $@"
+
+----->  ./scrip9bbuiltin.sh var1 var2 var3 var4
+result:
+first var is var1
+first var is var2
+first var is var3
+first var is var4
+script name is ./scrip9bbuiltin.sh
+all args are var1 var2 var3 var4
+
+  $@   - return all argument
+
+  $#   - return number of args
+
+  $$   - reyurn parent PID (script)  -- uses when reach max cpu usage  then kill PID
+ 
+  $!   - return last child command PID
+
+  $RANDOM    - generate random number.
+  
+  
+  
+Practice: write program to give an ip and ping it :
+
+
+
+  
+ 
 
 
 
