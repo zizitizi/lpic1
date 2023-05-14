@@ -280,6 +280,58 @@ cat << EOF
 cat >> mynames.txt << EOF
 
 
+### conditioning
+
+if [ experssion1 ]    --or -- if [];then - in one line. if true -or - if date ,... for always true
+then
+  command 1
+  commamd 2
+elif [ experssion2 ]
+then
+  command 3
+  command 4
+else
+  command 5
+  command 6
+fi
+
+
+sample1:
+#! /bin/bash
+
+#sample for if and for
+
+read -p "enter your favorite OS: " MY_OS
+
+if [ ${MY_OS} = "linux" ] || [ ${MY_OS} = "Linux" ] || [ $MY_OS = "unix" ]
+then
+    echo " nice to see you. enjoy it..."
+else
+    echo " shame on you...."
+fi
+
+
+another sample with tr:
+
+#!/bin/bash
+
+#sample code with if and tr
+
+
+read -p "   enter your favorite os:   " MYOS
+
+MYOS=`echo $MYOS | tr [:upper:] [:lower:] | tr -d [:blank:] | tr -d [:punct:] | tr -d [:digit:]`
+
+if [ $MYOS = "linux" ] || [ $MYOS = "unix" ]
+then
+        echo " good"
+else
+       echo " bad "
+fi
+
+
+
+
 
 
 
