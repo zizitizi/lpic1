@@ -455,12 +455,27 @@ bestpractice is to use tab instead of space in column file and default delimiter
 but in many org uses |
 cat mynames.txt | cut -f 2,4
 
+ping -c 4 8.8.8.8 | grep rtt | cut -d "/" -f 5
+
+
 ## awk
 
-is a programming language
+is a programming language. has 3 section :
+BEGIN{}  - like header
+{MAIN} - apply to all line
+END{}   - like footer. for ex. : sum of columns
 
+ping -c 4 8.8.8.8 | grep rtt | awk -F"/" '{print $5}'
 
+ping -c 4 8.8.8.8 | grep rtt | awk -F"/" '{print $2 " = " $5}'
 
+'{print $2 "\t" $5}'   - puts a tab between them
+'{print $2 "\n" $5}'  - add new line (enter)  between - 
+'{print $2 "\t\t" $5}'   - 2 tab
+'{print $2 "\t -----> \t" $5}' 
+awk BEGIN{print "hello"} {print $2 "--->\t" $5} END{"endof line" sum$4}
+  
+  
   
  
 
