@@ -476,8 +476,34 @@ ping -c 4 8.8.8.8 | grep rtt | awk -F"/" '{print $2 " = " $5}'
 awk BEGIN{print "hello"} {print $2 "--->\t" $5} END{"endof line" sum$4}
   
   
+## loops - for  - while
+
+for VAR in LIST;
+do
+  command1
+  command2 ..
+done
+
+
+LIST can be something like:
+1 2 3 4 5
+{1..5}
+{2..60..5}  - seq is 5
+${seq 0 2 10}  - seq is 2 
+${seq $start 2 $end}  - get var
   
- 
+
+#!/bin/bash
+
+#simple for
+
+
+for i in {1..5}
+do
+        echo "welcome $i "
+done
+
+
 
 
 
