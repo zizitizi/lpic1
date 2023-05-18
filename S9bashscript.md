@@ -508,6 +508,66 @@ done
 
 
 
+#/bin/bash
+#for seq=2
+
+for i in $(seq 1 2 10)
+do
+   echo "num is $i"
+done
+
+
+## while
+
+while [condition]
+do
+   command1 ..
+done   
+
+Infinite loop
+while true -- or -- while [ true ]  --or-- while [ somecommandtrue ] 
+do 
+  command1 
+done
+
+
+sample code:
+
+#!/bin/bash
+
+#while
+
+
+while [ -z $MYOS ]
+do
+        read -p  "  enter your os: " MYOS
+done
+
+
+echo "$MYOS"
+#MYOS=`echo $MYOS | tr -d [:punct:] | tr -d [:blank:]`
+
+MYOS=`echo $MYOS | tr -d [:punct:] | tr -d [:blank:]`
+
+#if [ $MYOS="linux" ] | [ $MYOS="linux5" ]
+echo "$MYOS"
+
+
+if [ $MYOS = "linux" ]
+then
+        echo " happy you"
+elif [ $MYOS = "unix" ]
+then
+        echo "not bad"
+else
+        echo "bad"
+fi
+
+
+
+
+
+
  
 
 
