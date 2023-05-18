@@ -315,6 +315,9 @@ another sample with tr:
 
 #!/bin/bash
 
+#### note: use
+echo linux5 | tr -d '[:digit:]'
+
 #sample code with if and tr
 
 
