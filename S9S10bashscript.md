@@ -642,10 +642,22 @@ analyse crontab
 crontab-generator.org
 make crontab
 
+##########################################
+#running the backup script
 30 0 * * * /home/zizi/script1.sh >> /home/zizi/script1.log 2>&1  - recommand *********
+#sending the log to another server
+30 0 * * * scp /home/zizi/script1.log zizi@backup-server:/home/backups  - its better add this line in script not crontab
+###########################################
+
+
+crontab -l
+timedatectl  - make sure about true time zone -  set-timezone Aisa/Tehran
 
 
 
+in etc/crontab - specify user - else run on root
+0 8 * * * su - zizi tar -zcvf /home/zizi/home.tgz /home/zizi
+....
 
 
  
