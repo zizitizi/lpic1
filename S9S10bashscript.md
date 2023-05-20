@@ -574,7 +574,123 @@ practice 1 :
 
 
 
- 
+#!/bin/bash
+
+#get one number and compare it with 10 return result lower bigger or equal
+
+while [ -z $NUM1 ]
+do
+        read -p "  enter a number to compare it with 10:  " NUM1
+done
+
+NUM1=`echo $NUM1 | tr -d [:blank:] | tr -d [:punct:]`
+
+#echo $NUM1
+
+if [ $NUM1 -gt 10 ]
+then
+        echo " your entered number is greater than 10 :) "
+elif [ $NUM1 -eq 10 ]
+then
+        echo " your entered number is equal to 10 := "
+else
+        echo " your entered number is less than 10 :( "
+fi
+
+
+
+
+practice 2 :
+
+
+#!/bin/bash
+
+
+#get 20 number compare them and outputed max , min , avg
+
+read -p " enter your first number " M0
+
+
+SUM1=$M0
+MIN1=$M0
+MAX1=$M0
+
+for i in {2..6}
+do
+        read -p " enter your $i st. number " M1
+        #NUM[$i]=M1
+        SUM1=$(expr ${SUM1} + ${M1})
+        #echo "$M1 , $MAX1 , $MIN1 , $SUM1"
+
+        if [ $M1 -ge $MAX1 ]
+        then
+                echo "$MAX1 "
+                MAX1=$M1
+                echo "$MAX1 "
+
+        elif [ $M1 -le $MIN1 ]
+        then
+                MIN1=$M1
+        else
+                i=$[$i+1]
+        fi
+done
+AVG=`echo "scale=2;${SUM1}/6" | bc`
+echo " maximum of your entered nmber is : $MAX1"
+echo " minimum of your entered nmber is : $MIN1"
+echo " average of your entered nmber is : $AVG"
+
+
+
+practice 3:
+
+
+ #/bin/bash
+
+
+#get ip user/pass front of script name then show result of ping if pingable then scp /etc/passwd in home remote user.
+
+
+echo "your ip is : $1 "
+
+echo "your user is : $2 "
+
+echo "your pass is : $3 "
+
+
+
+ping -c 5 $1
+#>/dev/null
+
+
+if [ $? -eq 0 ]
+then
+        echo " destination server with ip $1 and user $2 is reachable"
+        #`scp -r -B zizi /etc/passwd zizi@192.168.44.142:/home/zizi`
+        #`sshpass -p "zizi" scp -r /etc/passwd zizi@192.168.44.142:/home/zizi`
+        `sshpass -p "$3" scp -r /etc/passwd ${2}@192.168.44.142:/home/${2}`
+
+else
+        echo " server $1 with user $2 is not accible"
+fi
+
+
+practice 4:
+
+
+#!/bin/bash
+
+#5 to 50 interval5
+
+
+for i in $(seq 5 5 50)
+do
+        echo "$i"
+done
+
+
+
+
 
 
 
