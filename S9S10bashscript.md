@@ -589,11 +589,90 @@ we have 2 type of cron tab:
  in red hat : /var/spool/cron
  in debian : /var/spool/cron/crontab/
  
- 2- system wide
+ crontab -e - create or edit cron tab  ( or vi crontab)
+ crontab -l - list of content of cron tab file - cat
+ crontab -r -- remove crontab - rm
+ crontab -u <isername> - edit other users crontab
  
+ 
+ 
+ 
+ 2- system wide - in /etc/crontab
+ 
+ # Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
+25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+
+
+sample:
+ 
+0 5 * * 1 tar -zcf /var/backups/home.tgz /home/  - get backup from /home and make tar file in directory /var/backups/home.tgz
+
+ * 8 * * *   - from 8 to 9 every min everyday
+ 1 * * * *   - 24 time every day on 1 min on every houre
+ 5,35 * * * * -every 5 , 35 every houre
+ */10 * * * * - every 10 min from on crontab saved. recommand use 10 , ... like above
+ * */3 * * * - every 3 houre 
+ * 22 * * 6,0-4 or 6,7,1-3  - fron satureday to wedensday on 10 pm - 
+
+0 7 30 * * - every 30 month on 7:00 - but its not recommanded - its recommand to use first day of month instead last day some month have not 30.
+
+25 18 * * * su - arash ~/script                                   Daily @ 18:25
+20 7 5 * * ~/script                               5th of every month @ 07:20 AM
+15 * * 2 1 ~/script                  Each Monday in FEB, Minute 15 of each hour
+30 12 26 10 * ~/script                                  October 26th @ 12:30 PM
+10,20,30 * * * * ~/script                         Minutes 10,20,30 of each hour
+0 9 * * 0-3,6 ~/script                     Working days (SAT to WED) @ 09:00 AM
+*/10 * * * * ~/script                                          Every 10 minutes
+0 10 1,29 * * ~/script                      1st & 29th of each month @ 10:00 AM
+
+
+crontab.guru
+analyse crontab
+
+crontab-generator.org
+make crontab
+
+30 0 * * * /home/zizi/script1.sh >> /home/zizi/script1.log 2>&1  - recommand *********
+
+
+
+
+
  
 
 
+ 
+ 
+ 
+  
+  Operator  Description
+
+   
+  *  Any
+  value can be replaced (Always).
+ 
+  ,  Specify
+  a list of values for scheduling.
+
+  -  specify
+  range of values for scheduling.
+
+  /  Specify
+  values repeated between an interval.
+
+
+  
+ 
 
 
 
