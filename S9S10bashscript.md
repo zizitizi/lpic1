@@ -571,6 +571,28 @@ fi
 
 # Automation (schedule jobs)
 
+2 service to schedule script:
+
+1- cron: used in servers . if service stop at target schedule time when service start cron not start automatically . run by root. 1min to 1 year
+
+2- anacron : used in laptop and pc . if service stop at target schedule time when service start anacron start automatically to complete task. run by users . daily to monthly.
+
+#### note:
+/ and /var is one tho most important partition in linux . let it partition size like 500g for each one as type LVM in linux installing process so if they wil be full you can extend it with other unallocated partition with command lvextend . many tools use /var to handle their job like as: crond.
+if /var be full and 100% usage than the crond is runnong, but none of its jobs are running. 
+
+
+crond have a table to maintain its schedule that called crontab. crond check it every minute out. then minimum scheduling time for cron is 1 min.
+
+we have 2 type of cron tab:
+ 1- for every user: each user may have special crontab. to see crontabs most be root
+ in red hat : /var/spool/cron
+ in debian : /var/spool/cron/crontab/
+ 
+ 2- system wide
+ 
+ 
+
 
 
 
