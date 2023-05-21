@@ -867,7 +867,7 @@ practice 6:
 #number of cuurent loged in users
 
 
-OUTPUT4=/etc/motd/output.txt
+OUTPUT4=/etc/update-motd.d/100-output.txt
 echo "Hello $USER, today's date is $(date +"%A, %d-%m-%y")" >> $OUTPUT4
 
 WHO1=`w | awk '{print $1}'| sort -u`
