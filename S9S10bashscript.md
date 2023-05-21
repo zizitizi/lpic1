@@ -584,7 +584,7 @@ if /var be full and 100% usage than the crond is runnong, but none of its jobs a
 
 crond have a table to maintain its schedule that called crontab. crond check it every minute out. then minimum scheduling time for cron is 1 min.
 
-we have 2 type of cron tab:
+we have 3 type of cron tab:
  1- for every user: each user may have special crontab. to see crontabs most be root
  in red hat : /var/spool/cron
  in debian : /var/spool/cron/crontab/
@@ -598,6 +598,13 @@ we have 2 type of cron tab:
  
  
  2- system wide - in /etc/crontab
+ 
+ 3- ls -ld /etc/cron.*
+ 
+ for ex. for daily repeated job just add your script file in cron.daily directory and give it +x permission. it run in begin of day. and other so on.
+ hint: cron.d is a directory for our crontab script. it os location for our script to be centralize and inventory of crontab script.
+ 
+ 
  
  # Example of job definition:
 # .---------------- minute (0 - 59)
@@ -662,6 +669,27 @@ in etc/crontab - specify user - else run on root
 
  best practice use crontab -e --- root
  and just allow user root to make crontab - inthis case other user will deny
+ this 2 file can not be gather together:
+ /etc/cron.allow
+ /etc/cron.deny
+ 
+ if not exsist can be created manually.
+ vi /etc/cron.deny  - create black list for crontab -e . something like :
+ arash
+ ubuntu
+ 
+ for delet: rm -rf /etc/cron.deny
+ 
+ or best practice is create allow list with root:
+ vi  /etc/cron.allow  - create white list and add root and specified user below each other (vetically) to it.
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
  
 
 
@@ -810,6 +838,24 @@ for i in $(seq 5 5 50)
 do
         echo "$i"
 done
+
+
+# at (on time or at specified time)
+
+do sokme job just one time 
+
+apt install at
+
+ at 16:50 May 21
+ 
+ at> echo "hello" >> outputat.txt
+at> date >> outputat.txt
+press ctrl+D to exit
+
+atq - list of at
+
+atrm %1  - delet firat at job
+
 
 
 
