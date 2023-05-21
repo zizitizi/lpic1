@@ -866,9 +866,14 @@ practice 6:
 #show today date
 #number of cuurent loged in users
 
-echo "Hello $USER, today's date is $(date +"%A, %d-%m-%y")" >> /etc/motd/output.txt
 
-WHO=
+OUTPUT4=/etc/motd/output.txt
+echo "Hello $USER, today's date is $(date +"%A, %d-%m-%y")" >> $OUTPUT4
+
+WHO1=`w | awk '{print $1}'| sort -u`
+
+echo "$WHO1" >> $OUTPUT4
+
 
 
 
