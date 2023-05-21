@@ -841,6 +841,46 @@ do
 done
 
 
+
+practice 5:
+
+
+#!/bin/bash
+
+
+#line 1 , 3 /etc/passwd and output it with name of specified date time. delet it after 2 days
+#so copy this file with permission +x in cron.daily directory
+
+OUTPUT=/home/zizi/output_`date +%Y%m%d`.txt
+cat -n /etc/passwd | head -n 1 > $OUTPUT
+cat -n /etc/passwd | head -n 3 | tail -n -1 >> $OUTPUT
+
+#write crontab -e : 0 0 */2 * *  sudo -i  rm -rf /home/zizi/output_`date +%Y%m%d`.txt
+
+
+
+practice 6:
+
+#!/bin/bash
+#show welcome message to login user
+#show today date
+#number of cuurent loged in users
+
+echo "Hello $USER, today's date is $(date +"%A, %d-%m-%y")" >> /etc/motd/output.txt
+
+WHO=
+
+
+
+
+
+
+
+
+
+
+
+
 # at (on time or at specified time)
 
 do sokme job just one time 
