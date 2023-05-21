@@ -876,6 +876,36 @@ WHO1=`w | awk '{print $1}'| sort -u`
 echo "$WHO1" >> $OUTPUT4
 
 
+practice 7:
+
+
+#!/bin/bash
+
+#read ip file ping each ip write result of that file line by line in date+hostname.log
+
+#echo "Hello $USER, today's date is $(date +"%A, %d-%m-%y")"
+
+
+input="/home/zizi/iplist.txt"
+
+OUTPUT=~/output_IPping_`date +%Y%m%d`_`hostname`.log
+
+
+
+while IFS= read -r line
+do
+  echo "$line"
+  ping $line -c 4 >/dev/null
+  if [ $? -eq 0 ]
+  then
+          echo " `date +%Y/%m/%d-%H:%M:%S` -------> server ${line} is reachable" | tee -a $OUTPUT
+  else
+          echo " `date +%Y/%m/%d-%H:%M:%S` -------> server ${line} is not reachable" | tee -a $OUTPUT
+  fi
+done < "$input"
+
+
+
 
 
 
