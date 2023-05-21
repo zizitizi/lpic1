@@ -602,7 +602,8 @@ we have 3 type of cron tab:
  3- ls -ld /etc/cron.*
  
  for ex. for daily repeated job just add your script file in cron.daily directory and give it +x permission. it run in begin of day. and other so on.
- hint: cron.d is a directory for our crontab script. it os location for our script to be centralize and inventory of crontab script.
+ hint: cron.d is a directory for our crontab script. it os location for our script to be centralize and inventory of crontab script. best practice use this ******
+ 
  
  
  
