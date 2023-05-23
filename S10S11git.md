@@ -59,6 +59,64 @@ cat ~/.gitconfig
 
 
 
+## git repo
+
+make directory for source code. and introduce it to git. after that git track that directory
+
+with git user make directory
+ls -l
+mkdir gittest1
+ls -l 
+cd gittest1/
+git init
+ls -la
+if we have hidden fiel .git in dir list . it shows this forlder tracked by git
+cd .git
+ls -l
+cat config  - its our local configuration file
+
+if rm -rf .git -- this folder not track by git
+
+git status - after every change run this command
+
+
+## file status in git 
+we have 3 status for fiel in git:
+1- untracked (unstaged)  - something like  actor waiting to role play on stage in teather. to unstaged files use
+git rm --cached file1  -
+2- staged  - staged file with command  -something like  role playig actor on stage in teather
+git add 
+3- commit  - commit and register your change with command  - editor in theater - reports of editor is like commit message. goes that file to new version final register. released version
+git commit  - open default editor. its wats new file.
+
+
+vi scrip1.txt
+git status
+git add scrip1.txt  - add this file to stage
+git add -A == git add *  -  add all file in directory to staged
+git log
+
+f94a8a2bddfc26eeb055297acd53eecf885c9c8a  - its commit id - unique in the world
+
+ls -la
+vi scrip1.txt- change file
+git status - need to commit that modifed file . to restore to previous version
+git restore scrip1.txt - restore to before commit
+vi script1.txt
+git status
+vi newfile1.txt
+ git add -A
+git status
+
+ git commit -m " new file 1 added and scrip1.txt modified"
+
+ git status
+
+ git log
+ 
+ 
+
+
 
 
 
