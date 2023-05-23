@@ -114,10 +114,39 @@ git status
 
  git log
  
+ highest commit is newer one.
  
+ commit id - 7  begin digit is refrence id
 
+git diff HEAD - detect diff between last commit and before
 
+git log
+ 
+git diff f94a8a2b 14a1bf26 - difference between this 2 commit - be care full first older commit refrence id than newer commit
 
+git diff <older commit id> <newer commit id>  - 
+ 
+ 
+ 
+ ### git important commands in brief:
+ 
+ git init
+ git status
+ git add -A
+ git commit -m ""
+ git rm --staged <file>  - cached
+ git log
+ <><><><><><><><><><><
+ git restore <file>
+ git revert
+ git reset
+ <><><><><><><><><><><
+ git diff commit1 commit2
+      
+ 
+ 
+ 
+ 
 
 
 
