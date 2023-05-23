@@ -42,6 +42,20 @@ git config --global user.email "user1@gmail.com"
  
 ls -la  - see .gitconfig 
 
+cat .gitconfig
+git config --global core.editor vim
+
+ git config --global core.pager "less"
+
+##system level config 
+git config --system system.name "git repo1"
+git config --system user.name “user1 user”
+git config --global system.name “My Git Repo Server 1”  - system name for that user in global level
+git config --global core.editor vim
+git config --global core.pager ‘less’
+git config --list == cat /etc/gitconfig
+cat ~/.gitconfig
+
 
 
 
