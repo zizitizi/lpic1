@@ -1,0 +1,26 @@
+# bash practice
+
+1- get 10 number and compare to 10 output results
+
+#!/bin/bash
+
+#get 10 number and compare to 10 output results
+
+while [ -z $NUM ]
+do
+        read -p " enter a number to compare it with 10: " NUM
+done
+NUM=`echo $NUM | tr -d [:alpha:] | tr -d [:blank:] | tr -d [:punct:]`
+if [ $NUM -gt 10 ]
+then
+        echo " your enterd number is greater than 10 :)"
+elif [ $NUM -eq 10 ]
+then
+        echo " your entered number is equal to 10 :="
+else
+        echo " your entered number is less than 10 :("
+fi
+
+
+
+2- 
