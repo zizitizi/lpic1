@@ -75,7 +75,7 @@ then
         echo " destination server with ip $1 and user $2 is reachable"
         sshpass -p "$3" scp -r $4 $2@$1:$5
         if [ $? -eq 0 ]
-                echo "file $4 has benn sucessfully copied to $2@$1:$5"
+                echo "`date +%Y/%m/%d-%H:%M:%S` : file $4 has benn sucessfully copied to $2@$1:$5">> output.log
 else
         echo "server $1 with user $2 is not accessible"
 fi
@@ -87,4 +87,62 @@ crontab -e
 
 
 
+5- read field 1 ,3 passwd file and out put it to file with name same as date and save it everyday . after 2 days delete that file.
 
+#!/bin/bash
+
+#read field 1 ,3 passwd file and out put it to file with name same as date and save it everyday . after 2 days delete that file.
+
+OUTPUT=/home/zizi/output_`date +%Y%m%d`.txt
+awk -F ":" 'BEGIN{print "username:UID"} {print $1 ":" $3}' /etc/passwd | tee $OUTPUT
+find /home/zizi/ -name "output*.txt" -type f -mtime +2 -exec rm -rf {} \;
+
+#copy this file in cron.daily with permission +x
+
+
+hint: to empty a file in bash script you can do like this:
+
+cat /dev/null > output.log
+
+while true is infinite loop we can exit it with exit 0  command
+
+sleep 1 == 1 second
+
+
+
+
+7- get a ip list file and read it line by line and out put the result in output.log line by line
+
+
+#!/bin/bash
+
+#get a ip list file and read it line by line and out put the result in output.log line by line
+
+FILENAME=/home/ubuntu/ip-list.txt
+OUTPUT=/home/ubuntu/log_${HOSTNAME}_${TODAY}.log
+
+TODAY=`date +%Y%m%d`
+DATE=`date +%Y/%m/%d-%H:%M:%S`
+
+cat /dev/null > $OUTPUT
+cat $FILENAME | while read LINE
+do
+        ping -c 1 $LINE > /dev/hull
+        if [ $? -eq 0 ]
+        then
+                echo "$DATE : $LINE is pinable " | tee -a $OUTPUT
+        else
+                echo "$DATE : server $LINE is not pinable . please check it now!." | tee -a $OUTPUT
+        fi
+
+done
+
+
+##or you can input file to read in while from end of while 
+
+
+
+
+
+
+                       
