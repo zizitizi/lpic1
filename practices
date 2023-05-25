@@ -57,3 +57,34 @@ echo "minimum of your entered number is : $MIN"
 echo "average of your entered number is : $AVG"
 
 
+3- get ip and user , pass, source path to file and destination path in front of script and copy file to dest path
+
+
+#/bin/bash
+#get ip and user , pass, source path to file and destination path in front of script and copy file to dest path
+
+
+echo "your ip is: $1"
+echo "your user is : $2"
+echo "your pass is : $3"
+echo "your path to source file is :$4"
+echo "your destination folder is :$5"
+ping -c 5 $1 > /dev/null
+if [ $? -eq 0 ]
+then
+        echo " destination server with ip $1 and user $2 is reachable"
+        sshpass -p "$3" scp -r $4 $2@$1:$5
+        if [ $? -eq 0 ]
+                echo "file $4 has benn sucessfully copied to $2@$1:$5"
+else
+        echo "server $1 with user $2 is not accessible"
+fi
+
+#### HINT: we can write crontab with above script to copied like this:
+crontab -e
+0 0 * * * rm -rf /tmp/ubnutu_home.tar.gz; tar  -zcvf /tmp/ubuntu_home.tar.gz /home/ubuntu
+10 0 * * * /home/ubuntu/myscripts/myscript2.sh 172.10.10.10 ubuntu ubuntipass /tmp/ubuntu_home.tar.gz /tmp
+
+
+
+
