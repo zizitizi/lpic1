@@ -145,8 +145,27 @@ git diff <older commit id> <newer commit id>  -
       
  
  
+ ## git reset vs revert vs restore
+      
+      git restore -- have not new commit
+      git revert -- new commit for undo will register - doesnt update branch
+      git reset -- dangreous - it clear all by changing index bring to top  - branch update
+      
  
- 
+## clone vs cp
+      
+      in cp there is not any relation between cp and cp
+  but in clone relation ship is exist. for ex. after cjange we con push and merge it to server .
+      
+      to run pull need new commit id.
+      
+      git push can not do without permission: git push is disabled by default. but we cna change it by this commands:
+      
+      git config --global recieve.denyCurrentBranch ignore  --or something else true ,.. -id ignore we can push changes- run this commad on cloned server - for disable write false
+      
+      git config --list
+      
+      
 
 
 
