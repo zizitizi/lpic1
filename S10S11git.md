@@ -166,7 +166,28 @@ git diff <older commit id> <newer commit id>  -
       git config --list
       
       
-
+## git tag
+      
+      have 2 type: annotation or non-annotation
+      
+      commonly after every sprint or after multiple commit that complete one feather or solve important bug ,.... we use tag to release a version (maybe minor or major) . this commit is release and commonly stand for production server or be live for customer that we called released candidate or rc. it get tag or version number.
+      stagging - production stable.  dev stg uat prod  - stage in common company
+      
+      git tag tag1  - non-annotation
+      
+      git tag -a V1.1 -m "version 1.1 released"
+      
+      git tag == git tag --list
+      
+      git tag v1.2 cimmitid
+      
+      gti tag v1.3 --delete
+      
+      git show v1.1
+      
+## git branch
+      
+      
 
 
 
