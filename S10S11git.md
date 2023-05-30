@@ -190,6 +190,46 @@ git diff <older commit id> <newer commit id>  -
       
 
 
+   
+  Git branch Commands:
+ 
+  Git branch -a  -  List all of your branches.
+
+  Git branch [name]    -  Creating a new branch at the current commit.
+
+  Git checkout [branch-name]  - Switch to another branch.
+
+  Git checkout -b [name]  - Create a new branch and switch to it at the moment.
+
+  Git merge [branch]  - Unstage a file while retaining the changes in working directory.
+      
+  Git merge [branch] --no-ff -   Create a merge commit in all cases. No fast-forward.
+
+  Git log  - Show all commits in the current branch’s history.
+
+
+      
+      git log -5  - 5 last log
+      
+      
+      
+git log
+git log -p -2
+git log --stat
+git log --pretty=oneline
+git log --pretty=oneline --graph
+git log --pretty=reference
+git log --graph
+      
+********sample for beatify git log code:
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+
+  
+ 
+
+
+
 
 
 
