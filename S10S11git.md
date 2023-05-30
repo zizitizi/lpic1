@@ -225,6 +225,17 @@ git log --graph
 git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 
+      
+note1: in crontan to have and see log do:
+      0 0 * * * tar -zcvf /tmp/ubuntu_home.tar.gz /home/zizi/gittest2 >> /home/zizi/cronzizi.log 2>&1
+
+note: when we have confilict on brach merge git. what can we do? 
+      we have confilict when 2 brach work on a same file and on same line. to fix confilict in server git open file manually and edit it and add and commit . on github select which one we considered.
+  
+  
+  
+# github
+  
   
  
 
