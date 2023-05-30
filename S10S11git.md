@@ -207,7 +207,7 @@ git diff <older commit id> <newer commit id>  -
 
   Git log  - Show all commits in the current branch’s history.
 
-
+hint: to do git merge we should be on destination than run : git merge develop
       
       git log -5  - 5 last log
       
@@ -235,6 +235,40 @@ note: when we have confilict on brach merge git. what can we do?
   
   
 # github
+  
+git with web gui.  have ci/cd. nowdays we dont need jenkins. 
+  
+pull reguest from github is like push from us.
+  
+mr==gr  merege request  
+wiki==readme
+  
+default branch in github and gitlab is main we can change it to master by setting
+  
+  
+to clone from github:
+  git clone <giturl>
+
+  
+github action == devops pipeline == CI/CD
+  
+  
+  
+  
+  
+# git lab
+  
+git with gui that we can install locally. have ci/cd. nowdays we dont need jenkins. 
+gitlab-ci  -  we can deploy both win and linux but linux is better integrate
+  
+  
+  
+# Azure
+  
+azure cloud -aws -gcp : all is cloud
+but microsft have microsoft azure devops that we can install locally - include: git repo (code commit) -ci/cd- docker
+Azure -  we can deploy both win and linux but windows is better integrate  
+  
   
   
  
