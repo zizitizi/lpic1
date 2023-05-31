@@ -260,6 +260,12 @@ to push into github account , will be asking from github user account and passwo
 after provide note and expiration date and generate it . copy and keep it in your pc . copy and paste this token in answer of : your password
 all thing will be push and sync  
 
+to recive change from github into mylocal repo run :git pull or git fetch
+  
+#### difference between git pull and git fetch **********
+  git fetch recive logs and commit id but not change not edit
+  git pull = gitfetch + update changes infile
+  
   
   
 # git lab
