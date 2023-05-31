@@ -285,7 +285,10 @@ git remote  - where we clone this proj
 git remote -v  - fetch and push is seperate then we can fetch projects from one source and push it to another source. to asign a link to it do next command*****
 git remote add <aliasname> gitrepourl  - we can add a github repo to our local repo
   
-  
+git remote add [alias] https://github.com/arashforoughi/new-repo.git
+git remote –v
+git push –u origin master
+git remote --delete  
   
 # Azure
   
