@@ -252,7 +252,9 @@ to clone from github:
   
 github action == devops pipeline == CI/CD
   
-  
+github is origin and my clone name is remote
+
+after add and commit we can push it again to github  
   
   
   
