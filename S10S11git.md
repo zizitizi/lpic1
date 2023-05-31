@@ -256,6 +256,10 @@ github is origin and my clone name is remote
 
 after add and commit we can push it again to github  
   
+to push into github account , will be asking from github user account and password. to provide password we should go in github to profile setting (not project setting) > developer mode > personal access tokens > tokens (classic) > generate new token> generate new token(classic)
+after provide note and expiration date and generate it . copy and keep it in your pc . copy and paste this token in answer of : your password
+all thing will be push and sync  
+
   
   
 # git lab
