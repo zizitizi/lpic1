@@ -266,12 +266,24 @@ to recive change from github into mylocal repo run :git pull or git fetch
   git fetch recive logs and commit id but not change not edit
   git pull = gitfetch + update changes infile
   
+### add new github repo to my local git folder 
+  after make directory and run git init - run:
+  git remote add origin https://github.com/zizitizi/my-devops-Roadmap.git  - make link between local and github
+  git remote -v 
+  git push -u origin master - push change to master branch -u is optional(upstream)
+  
   
   
 # git lab
   
 git with gui that we can install locally. have ci/cd. nowdays we dont need jenkins. 
 gitlab-ci  -  we can deploy both win and linux but linux is better integrate
+
+  
+git remote --help  
+git remote  - where we clone this proj
+git remote -v  - fetch and push is seperate then we can fetch projects from one source and push it to another source. to asign a link to it do next command*****
+git remote add <aliasname> gitrepourl  - we can add a github repo to our local repo
   
   
   
