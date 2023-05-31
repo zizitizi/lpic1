@@ -290,6 +290,9 @@ git remote –v
 git push –u origin master
 git remote --delete  
   
+  
+in gitlab we can use miror feature to backup our local gitlab repo to online githaub account   
+  
 # Azure
   
 azure cloud -aws -gcp : all is cloud
