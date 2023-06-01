@@ -291,7 +291,8 @@ git push –u origin master
 git remote --delete  
   
   
-in gitlab we can use miror feature to backup our local gitlab repo to online githaub account   
+in gitlab we can use miror feature to backup our local gitlab repo to online githaub account. so in your gitlab go to pojectsetting
+  >repository>Mirroring repositories   - add githuburl with token
   
 # Azure
   
