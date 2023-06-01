@@ -274,6 +274,22 @@ to recive change from github into mylocal repo run :git pull or git fetch
   
   
   
+add new folder to github:
+  go to the folder within which you would like to make another folder
+
+Click on New file
+
+on the text field for the file name, first, write the folder name you want to create
+
+then type /. This creates a folder
+
+you can add more folders similarly
+
+finally, give the new file a name, (eg. .gitkeep which is conventionally used to allow git to track otherwise empty folders; not a git feature though)
+
+finally, click Commit new file.
+  
+  
 # git lab
   
 git with gui that we can install locally. have ci/cd. nowdays we dont need jenkins. 
