@@ -288,7 +288,7 @@ git remote add <aliasname> gitrepourl  - we can add a github repo to our local r
 git remote add [alias] https://github.com/zizitizi/new-repo.git
 git remote –v
 git push –u origin master
-git remote --delete  
+git remote remove origin
   
   
 in gitlab we can use miror feature to backup our local gitlab repo to online githaub account. so in your gitlab go to pojectsetting
