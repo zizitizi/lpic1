@@ -240,7 +240,7 @@ git with web gui.  have ci/cd. nowdays we dont need jenkins.
   
 pull reguest from github is like push from us.
   
-mr==gr  merege request  
+mr==pr  merege request == pull request  
 wiki==readme
   
 default branch in github and gitlab is main we can change it to master by setting
@@ -285,7 +285,7 @@ git remote  - where we clone this proj
 git remote -v  - fetch and push is seperate then we can fetch projects from one source and push it to another source. to asign a link to it do next command*****
 git remote add <aliasname> gitrepourl  - we can add a github repo to our local repo
   
-git remote add [alias] https://github.com/arashforoughi/new-repo.git
+git remote add [alias] https://github.com/zizitizi/new-repo.git
 git remote –v
 git push –u origin master
 git remote --delete  
