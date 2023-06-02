@@ -206,6 +206,8 @@ git diff <older commit id> <newer commit id>  -
   Git merge [branch] --no-ff -   Create a merge commit in all cases. No fast-forward.
 
   Git log  - Show all commits in the current branch’s history.
+      
+  git branch -D dev    
 
 hint: to do git merge we should be on destination than run : git merge develop
       
