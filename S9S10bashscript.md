@@ -74,11 +74,13 @@ in /etc/ssh we have to config file:
   # shell scripting (bash scripting)
   
   define a function in linux:
-  function_name()
-  {
-   [action1]
-   [action2]
-  } 
+  
+        function_name()
+        {
+         [action1]
+         [action2]
+        } 
+
   
 define variable:
 
@@ -90,6 +92,7 @@ unset VAR1
 
 
 $1 ,$2,.... $9 . we can call them in front of our function
+
 myfunc()
 {
 echo $1
@@ -113,6 +116,7 @@ or
 all program or excutable file detemine with it first line that for bash script file use .sh soffix. for ex.:
 
 vi script1.sh
+
 #! /bin/bash
 
 echo "hello script"
@@ -128,13 +132,13 @@ for excuting bash script file path to it. for current directory use:
  another sample: 
  
  
-#!/bin/bash
-
-#helo description
-
-MYNAME="zizi tizi"
-
-echo "my name is ${MYNAME}"
+      #!/bin/bash
+      
+      #helo description
+      
+      MYNAME="zizi tizi"
+      
+      echo "my name is ${MYNAME}"
 
  
  
@@ -247,6 +251,7 @@ NOTE: OUTPUT should not have double qoute "".
  bc  - active calculator to get commands. for divide / that its without desimal digit. for get desimal digit use scale command for specify The number of decimal places.
  
  for ex.:
+ 
  scale = 2
  3.2/2.5
  --> 1.28
@@ -260,100 +265,104 @@ NOTE: OUTPUT should not have double qoute "".
  
  sample for bash calculator:
  
- #!/bin/bash
-
-#bc calculator
-
-read -p " enter forst num. : " VAR1
-read -p " enter second num. : " VAR2
-
-MULTI=`echo "$VAR1*$VAR2" |bc`
-DIVI=`echo "scale=4; $VAR1/$VAR2" | bc`
-echo " multi is $MULTI , divide id $DIVI "
+       #!/bin/bash
+      
+      #bc calculator
+      
+      read -p " enter forst num. : " VAR1
+      read -p " enter second num. : " VAR2
+      
+      MULTI=`echo "$VAR1*$VAR2" |bc`
+      DIVI=`echo "scale=4; $VAR1/$VAR2" | bc`
+      echo " multi is $MULTI , divide id $DIVI "
 
 #### EOF end of file
 
-wc << EOF   --- always come at the end of command
-
-cat << EOF
-
-cat >> mynames.txt << EOF
+      wc << EOF   --- always come at the end of command
+      
+      cat << EOF
+      
+      cat >> mynames.txt << EOF
 
 
 ### conditioning
 
-if [ experssion1 ]    --or -- if [];then - in one line. if true -or - if date ,... for always true
-then
-  command 1
-  commamd 2
-elif [ experssion2 ]
-then
-  command 3
-  command 4
-else
-  command 5
-  command 6
-fi
+      if [ experssion1 ]    --or -- if [];then - in one line. if true -or - if date ,... for always true
+      then
+        command 1
+        commamd 2
+      elif [ experssion2 ]
+      then
+        command 3
+        command 4
+      else
+        command 5
+        command 6
+      fi
 
 
 sample1:
-#! /bin/bash
 
-#sample for if and for
-
-read -p "enter your favorite OS: " MY_OS
-
-if [ ${MY_OS} = "linux" ] || [ ${MY_OS} = "Linux" ] || [ $MY_OS = "unix" ]
-then
-    echo " nice to see you. enjoy it..."
-else
-    echo " shame on you...."
-fi
-
+      #! /bin/bash
+      
+      #sample for if and for
+      
+      read -p "enter your favorite OS: " MY_OS
+      
+      if [ ${MY_OS} = "linux" ] || [ ${MY_OS} = "Linux" ] || [ $MY_OS = "unix" ]
+      then
+          echo " nice to see you. enjoy it..."
+      else
+          echo " shame on you...."
+      fi
+      
 
 another sample with tr:
 
-#!/bin/bash
-
-#### note: use
-echo linux5 | tr -d '[:digit:]'
-
-#sample code with if and tr
-
-
-read -p "   enter your favorite os:   " MYOS
-
-MYOS=`echo $MYOS | tr [:upper:] [:lower:] | tr -d [:blank:] | tr -d [:punct:] | tr -d [:digit:]`
-
-if [ $MYOS = "linux" ] || [ $MYOS = "unix" ]
-then
-        echo " good"
-else
-       echo " bad "
-fi
-
+      
+      #!/bin/bash
+      
+      #### note: use
+      echo linux5 | tr -d '[:digit:]'
+      
+      #sample code with if and tr
+      
+      
+      read -p "   enter your favorite os:   " MYOS
+      
+      MYOS=`echo $MYOS | tr [:upper:] [:lower:] | tr -d [:blank:] | tr -d [:punct:] | tr -d [:digit:]`
+      
+      if [ $MYOS = "linux" ] || [ $MYOS = "unix" ]
+      then
+              echo " good"
+      else
+             echo " bad "
+      fi
+      
 
 
 another sample :
-#!/bin/bash
-
-#compare two number to devide
-
-read -p " enter number: " VAR1
-
-read -p "  enter a number again : " VAR2
-
-MULTI=`echo "$VAR1*$VAR2" | bc`
-if [ $VAR1 > $VAR2 ]   #if there is digit in one of condition side we should use -gt inplace of >    .
-then
-        DIV=`echo "scale=4 ; $VAR1/$VAR2" | bc`
-else
-        DIV=`echo "scale=4; $VAR2/$VAR1 " |bc`
-fi
-
-echo " your multi ply is $MULTI and devide is $DIV"
 
 
+      #!/bin/bash
+      
+      #compare two number to devide
+      
+      read -p " enter number: " VAR1
+      
+      read -p "  enter a number again : " VAR2
+      
+      MULTI=`echo "$VAR1*$VAR2" | bc`
+      if [ $VAR1 > $VAR2 ]   #if there is digit in one of condition side we should use -gt inplace of >    .
+      then
+              DIV=`echo "scale=4 ; $VAR1/$VAR2" | bc`
+      else
+              DIV=`echo "scale=4; $VAR2/$VAR1 " |bc`
+      fi
+      
+      echo " your multi ply is $MULTI and devide is $DIV"
+      
+      
 
 
 
@@ -397,24 +406,28 @@ echo " your multi ply is $MULTI and devide is $DIV"
   $0   - name of script
 
   $1 ~ 9  - number to give var for script for ex.:
-  #!/bin/bash
-
-
-echo "first var is $1"
-echo "first var is $2"
-echo "first var is $3"
-echo "first var is $4"
-echo "script name is $0"
-echo " all args are $@"
+ 
+  
+      #!/bin/bash
+      
+      
+      echo "first var is $1"
+      echo "first var is $2"
+      echo "first var is $3"
+      echo "first var is $4"
+      echo "script name is $0"
+      echo " all args are $@"
 
 ----->  ./scrip9bbuiltin.sh var1 var2 var3 var4
+
 result:
-first var is var1
-first var is var2
-first var is var3
-first var is var4
-script name is ./scrip9bbuiltin.sh
-all args are var1 var2 var3 var4
+
+      first var is var1
+      first var is var2
+      first var is var3
+      first var is var4
+      script name is ./scrip9bbuiltin.sh
+      all args are var1 var2 var3 var4
 
   $@   - return all argument
 
@@ -430,22 +443,23 @@ all args are var1 var2 var3 var4
   
 Practice: write program to give an ip and ping it :
 
-#!/bin/bash
 
-#common ping script
-
-read -p "   enter your IP :  " MYIP
-
-OUTPUT=~/outputping9_IP_`date +%Y%m%d`.log
-ping -c 5 $MYIP >/dev/null
-
-if [ $? -eq 0 ]
-then
-        echo " `date +%Y/%m/%d-%H:%M:%S` -------> server ${MYIP} is reachable" | tee -a $OUTPUT
-else
-        echo " `date +%Y/%m/%d-%H:%M:%S` -------> server ${MYIP} is not reachable" | tee -a $OUTPUT
-fi
-
+      #!/bin/bash
+      
+      #common ping script
+      
+      read -p "   enter your IP :  " MYIP
+      
+      OUTPUT=~/outputping9_IP_`date +%Y%m%d`.log
+      ping -c 5 $MYIP >/dev/null
+      
+      if [ $? -eq 0 ]
+      then
+              echo " `date +%Y/%m/%d-%H:%M:%S` -------> server ${MYIP} is reachable" | tee -a $OUTPUT
+      else
+              echo " `date +%Y/%m/%d-%H:%M:%S` -------> server ${MYIP} is not reachable" | tee -a $OUTPUT
+      fi
+      
 
 
 ### cut
@@ -464,9 +478,13 @@ ping -c 4 8.8.8.8 | grep rtt | cut -d "/" -f 5
 ## awk
 
 is a programming language. has 3 section :
+
 BEGIN{}  - like header
+
 {MAIN} - apply to all line
+
 END{}   - like footer. for ex. : sum of columns
+
 
 ping -c 4 8.8.8.8 | grep rtt | awk -F"/" '{print $5}'
 
@@ -481,90 +499,91 @@ awk BEGIN{print "hello"} {print $2 "--->\t" $5} END{"endof line" sum$4}
   
 ## loops - for  - while
 
-for VAR in LIST;
-do
-  command1
-  command2 ..
-done
+      for VAR in LIST;
+      do
+        command1
+        command2 ..
+      done
 
 
 LIST can be something like:
+
 1 2 3 4 5
 {1..5}
 {2..60..5}  - seq is 5
 ${seq 0 2 10}  - seq is 2 
 ${seq $start 2 $end}  - get var
   
-
-#!/bin/bash
-
-#simple for
-
-
-for i in {1..5}
-do
-        echo "welcome $i "
-done
-
-
-
+      
+      #!/bin/bash
+      
+      #simple for
+      
+      
+      for i in {1..5}
+      do
+              echo "welcome $i "
+      done
+      
 
 
 
-#/bin/bash
-#for seq=2
 
-for i in $(seq 1 2 10)
-do
-   echo "num is $i"
-done
+
+      #/bin/bash
+      #for seq=2
+      
+      for i in $(seq 1 2 10)
+      do
+         echo "num is $i"
+      done
 
 
 ## while
 
-while [condition]
-do
-   command1 ..
-done   
-
-Infinite loop
-while true -- or -- while [ true ]  --or-- while [ somecommandtrue ] 
-do 
-  command1 
-done
+      while [condition]
+      do
+         command1 ..
+      done   
+      
+      Infinite loop
+      while true -- or -- while [ true ]  --or-- while [ somecommandtrue ] 
+      do 
+        command1 
+      done
 
 
 sample code:
 
-#!/bin/bash
+      #!/bin/bash
+      
+      #while
+      
+      
+      while [ -z $MYOS ]
+      do
+              read -p  "  enter your os: " MYOS
+      done
+      
+      
+      echo "$MYOS"
+      #MYOS=`echo $MYOS | tr -d [:punct:] | tr -d [:blank:]`
+      
+      MYOS=`echo $MYOS | tr -d [:punct:] | tr -d [:blank:]`
+      
+      #if [ $MYOS="linux" ] | [ $MYOS="linux5" ]
+      echo "$MYOS"
 
-#while
 
-
-while [ -z $MYOS ]
-do
-        read -p  "  enter your os: " MYOS
-done
-
-
-echo "$MYOS"
-#MYOS=`echo $MYOS | tr -d [:punct:] | tr -d [:blank:]`
-
-MYOS=`echo $MYOS | tr -d [:punct:] | tr -d [:blank:]`
-
-#if [ $MYOS="linux" ] | [ $MYOS="linux5" ]
-echo "$MYOS"
-
-
-if [ $MYOS = "linux" ]
-then
-        echo " happy you"
-elif [ $MYOS = "unix" ]
-then
-        echo "not bad"
-else
-        echo "bad"
-fi
+      if [ $MYOS = "linux" ]
+      then
+              echo " happy you"
+      elif [ $MYOS = "unix" ]
+      then
+              echo "not bad"
+      else
+              echo "bad"
+      fi
 
 
 
@@ -585,13 +604,19 @@ if /var be full and 100% usage than the crond is runnong, but none of its jobs a
 crond have a table to maintain its schedule that called crontab. crond check it every minute out. then minimum scheduling time for cron is 1 min.
 
 we have 3 type of cron tab:
+
  1- for every user: each user may have special crontab. to see crontabs most be root
+ 
  in red hat : /var/spool/cron
+ 
  in debian : /var/spool/cron/crontab/
  
  crontab -e - create or edit cron tab  ( or vi crontab)
+ 
  crontab -l - list of content of cron tab file - cat
+ 
  crontab -r -- remove crontab - rm
+ 
  crontab -u <isername> - edit other users crontab
  
  
@@ -607,41 +632,51 @@ we have 3 type of cron tab:
  
  
  
- # Example of job definition:
-# .---------------- minute (0 - 59)
-# |  .------------- hour (0 - 23)
-# |  |  .---------- day of month (1 - 31)
-# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
-# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
-# |  |  |  |  |
-# *  *  *  *  * user-name command to be executed
-17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
-25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
-47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
-52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+       # Example of job definition:
+      # .---------------- minute (0 - 59)
+      # |  .------------- hour (0 - 23)
+      # |  |  .---------- day of month (1 - 31)
+      # |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+      # |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+      # |  |  |  |  |
+      # *  *  *  *  * user-name command to be executed
+      17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
+      25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+      47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+      52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 
 
 sample:
  
 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/  - get backup from /home and make tar file in directory /var/backups/home.tgz
 
- * 8 * * *   - from 8 to 9 every min everyday
- 1 * * * *   - 24 time every day on 1 min on every houre
- 5,35 * * * * -every 5 , 35 every houre
- */10 * * * * - every 10 min from on crontab saved. recommand use 10 , ... like above
- * */3 * * * - every 3 houre 
- * 22 * * 6,0-4 or 6,7,1-3  - fron satureday to wedensday on 10 pm - 
+       * 8 * * *   - from 8 to 9 every min everyday
+       1 * * * *   - 24 time every day on 1 min on every houre
+       5,35 * * * * -every 5 , 35 every houre
+       */10 * * * * - every 10 min from on crontab saved. recommand use 10 , ... like above
+       * */3 * * * - every 3 houre 
+       * 22 * * 6,0-4 or 6,7,1-3  - fron satureday to wedensday on 10 pm - 
 
-0 7 30 * * - every 30 month on 7:00 - but its not recommanded - its recommand to use first day of month instead last day some month have not 30.
+0 7 30 * * - every 30th month on 7:00 - but its not recommanded - its recommand to use first day of month instead last day some month have not 30.
+
+
 
 25 18 * * * su - arash ~/script                                   Daily @ 18:25
+
 20 7 5 * * ~/script                               5th of every month @ 07:20 AM
+
 15 * * 2 1 ~/script                  Each Monday in FEB, Minute 15 of each hour
+
 30 12 26 10 * ~/script                                  October 26th @ 12:30 PM
+
 10,20,30 * * * * ~/script                         Minutes 10,20,30 of each hour
+
 0 9 * * 0-3,6 ~/script                     Working days (SAT to WED) @ 09:00 AM
+
 */10 * * * * ~/script                                          Every 10 minutes
+
 0 10 1,29 * * ~/script                      1st & 29th of each month @ 10:00 AM
+
 
 
 crontab.guru
@@ -650,12 +685,12 @@ analyse crontab
 crontab-generator.org
 make crontab
 
-##########################################
-#running the backup script
-30 0 * * * /home/zizi/script1.sh >> /home/zizi/script1.log 2>&1  - recommand *********
-#sending the log to another server
-30 0 * * * scp /home/zizi/script1.log zizi@backup-server:/home/backups  - its better add this line in script not crontab
-###########################################
+      ##########################################
+      #running the backup script
+      30 0 * * * /home/zizi/script1.sh >> /home/zizi/script1.log 2>&1  - recommand *********
+      #sending the log to another server
+      30 0 * * * scp /home/zizi/script1.log zizi@backup-server:/home/backups  - its better add this line in script not crontab
+      ###########################################
 
 
 crontab -l
@@ -725,120 +760,120 @@ practice 1 :
 
 
 
-
-#!/bin/bash
-
-#get one number and compare it with 10 return result lower bigger or equal
-
-while [ -z $NUM1 ]
-do
-        read -p "  enter a number to compare it with 10:  " NUM1
-done
-
-NUM1=`echo $NUM1 | tr -d [:blank:] | tr -d [:punct:]`
-
-#echo $NUM1
-
-if [ $NUM1 -gt 10 ]
-then
-        echo " your entered number is greater than 10 :) "
-elif [ $NUM1 -eq 10 ]
-then
-        echo " your entered number is equal to 10 := "
-else
-        echo " your entered number is less than 10 :( "
-fi
-
+      
+      #!/bin/bash
+      
+      #get one number and compare it with 10 return result lower bigger or equal
+      
+      while [ -z $NUM1 ]
+      do
+              read -p "  enter a number to compare it with 10:  " NUM1
+      done
+      
+      NUM1=`echo $NUM1 | tr -d [:blank:] | tr -d [:punct:]`
+      
+      #echo $NUM1
+      
+      if [ $NUM1 -gt 10 ]
+      then
+              echo " your entered number is greater than 10 :) "
+      elif [ $NUM1 -eq 10 ]
+      then
+              echo " your entered number is equal to 10 := "
+      else
+              echo " your entered number is less than 10 :( "
+      fi
+      
 
 
 
 practice 2 :
 
 
-#!/bin/bash
-
-
-#get 20 number compare them and outputed max , min , avg
-
-read -p " enter your first number " M0
-
-
-SUM1=$M0
-MIN1=$M0
-MAX1=$M0
-
-for i in {2..6}
-do
-        read -p " enter your $i st. number " M1
-        #NUM[$i]=M1
-        SUM1=$(expr ${SUM1} + ${M1})
-        #echo "$M1 , $MAX1 , $MIN1 , $SUM1"
-
-        if [ $M1 -ge $MAX1 ]
-        then
-                echo "$MAX1 "
-                MAX1=$M1
-                echo "$MAX1 "
-
-        elif [ $M1 -le $MIN1 ]
-        then
-                MIN1=$M1
-        else
-                i=$[$i+1]
-        fi
-done
-AVG=`echo "scale=2;${SUM1}/6" | bc`
-echo " maximum of your entered nmber is : $MAX1"
-echo " minimum of your entered nmber is : $MIN1"
-echo " average of your entered nmber is : $AVG"
+      #!/bin/bash
+      
+      
+      #get 20 number compare them and outputed max , min , avg
+      
+      read -p " enter your first number " M0
+      
+      
+      SUM1=$M0
+      MIN1=$M0
+      MAX1=$M0
+      
+      for i in {2..6}
+      do
+              read -p " enter your $i st. number " M1
+              #NUM[$i]=M1
+              SUM1=$(expr ${SUM1} + ${M1})
+              #echo "$M1 , $MAX1 , $MIN1 , $SUM1"
+      
+              if [ $M1 -ge $MAX1 ]
+              then
+                      echo "$MAX1 "
+                      MAX1=$M1
+                      echo "$MAX1 "
+      
+              elif [ $M1 -le $MIN1 ]
+              then
+                      MIN1=$M1
+              else
+                      i=$[$i+1]
+              fi
+      done
+      AVG=`echo "scale=2;${SUM1}/6" | bc`
+      echo " maximum of your entered nmber is : $MAX1"
+      echo " minimum of your entered nmber is : $MIN1"
+      echo " average of your entered nmber is : $AVG"
 
 
 
 practice 3:
 
 
- #/bin/bash
-
-
-#get ip user/pass front of script name then show result of ping if pingable then scp /etc/passwd in home remote user.
-
-
-echo "your ip is : $1 "
-
-echo "your user is : $2 "
-
-echo "your pass is : $3 "
-
-
-
-ping -c 5 $1
-#>/dev/null
-
-
-if [ $? -eq 0 ]
-then
-        echo " destination server with ip $1 and user $2 is reachable"
-        #`scp -r -B zizi /etc/passwd zizi@192.168.44.142:/home/zizi`
-        #`sshpass -p "zizi" scp -r /etc/passwd zizi@192.168.44.142:/home/zizi`
-        `sshpass -p "$3" scp -r /etc/passwd ${2}@192.168.44.142:/home/${2}`
-
-else
-        echo " server $1 with user $2 is not accible"
-fi
+       #/bin/bash
+      
+      
+      #get ip user/pass front of script name then show result of ping if pingable then scp /etc/passwd in home remote user.
+      
+      
+      echo "your ip is : $1 "
+      
+      echo "your user is : $2 "
+      
+      echo "your pass is : $3 "
+      
+      
+      
+      ping -c 5 $1
+      #>/dev/null
+      
+      
+      if [ $? -eq 0 ]
+      then
+              echo " destination server with ip $1 and user $2 is reachable"
+              #`scp -r -B zizi /etc/passwd zizi@192.168.44.142:/home/zizi`
+              #`sshpass -p "zizi" scp -r /etc/passwd zizi@192.168.44.142:/home/zizi`
+              `sshpass -p "$3" scp -r /etc/passwd ${2}@192.168.44.142:/home/${2}`
+      
+      else
+              echo " server $1 with user $2 is not accible"
+      fi
 
 
 practice 4:
 
 
-#!/bin/bash
-
-#5 to 50 interval5
-
-
-for i in $(seq 5 5 50)
-do
-        echo "$i"
-done
+      #!/bin/bash
+      
+      #5 to 50 interval5
+      
+      
+      for i in $(seq 5 5 50)
+      do
+              echo "$i"
+      done
 
 
 # at (on time or at specified time)
