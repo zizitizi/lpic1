@@ -130,27 +130,27 @@ git diff <older commit id> <newer commit id>  -
  
  ### git important commands in brief:
  
- git init
- git status
- git add -A
- git commit -m ""
- git rm --staged <file>  - cached
- git log
- <><><><><><><><><><><
- git restore <file>
- git revert
- git reset
- <><><><><><><><><><><
- git diff commit1 commit2
+    git init
+    git status
+    git add -A
+    git commit -m ""
+    git rm --staged <file>  - cached
+    git log
+    <><><><><><><><><><><
+    git restore <file>
+    git revert
+    git reset
+    <><><><><><><><><><><
+    git diff commit1 commit2
       
  
  
  ## git reset vs revert vs restore
       
-      git restore -- have not new commit
-      git revert -- new commit for undo will register - doesnt update branch
-      git reset -- dangreous - it clear all by changing index bring to top  - branch update
-      
+         git restore -- have not new commit
+         git revert -- new commit for undo will register - doesnt update branch
+         git reset -- dangreous - it clear all by changing index bring to top  - branch update
+         
  
 ## clone vs cp
       
@@ -173,17 +173,17 @@ git diff <older commit id> <newer commit id>  -
       commonly after every sprint or after multiple commit that complete one feather or solve important bug ,.... we use tag to release a version (maybe minor or major) . this commit is release and commonly stand for production server or be live for customer that we called released candidate or rc. it get tag or version number.
       stagging - production stable.  dev stg uat prod  - stage in common company
       
-      git tag tag1  - non-annotation
-      
-      git tag -a V1.1 -m "version 1.1 released"
-      
-      git tag == git tag --list
-      
-      git tag v1.2 cimmitid
-      
-      gti tag v1.3 --delete
-      
-      git show v1.1
+         git tag tag1  - non-annotation
+         
+         git tag -a V1.1 -m "version 1.1 released"
+         
+         git tag == git tag --list
+         
+         git tag v1.2 cimmitid
+         
+         gti tag v1.3 --delete
+         
+         git show v1.1
       
 ## git branch
       
@@ -265,15 +265,15 @@ all thing will be push and sync
 to recive change from github into mylocal repo run :git pull or git fetch
   
 #### difference between git pull and git fetch **********
-  git fetch recive logs and commit id but not change not edit
-  git pull = gitfetch + update changes infile
+     git fetch recive logs and commit id but not change not edit
+     git pull = gitfetch + update changes infile
   
 ### add new github repo to my local git folder 
   after make directory and run git init - run:
-  git remote add origin https://github.com/zizitizi/my-devops-Roadmap.git  - make link between local and github
-  git remote -v 
-  git push -u origin master - push change to master branch -u is optional(upstream)
-  
+     git remote add origin https://github.com/zizitizi/my-devops-Roadmap.git  - make link between local and github
+     git remote -v 
+     git push -u origin master - push change to master branch -u is optional(upstream)
+     
   
   
 add new folder to github:
